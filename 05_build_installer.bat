@@ -1,0 +1,1 @@
+msbuild installer\MumbleInstall.wixproj /p:Configuration=Release
