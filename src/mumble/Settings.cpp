@@ -382,7 +382,7 @@ Settings::Settings() {
 
 	// Special configuration options not exposed to UI
 	bDisableCELT = false;
-	disablePublicList = false;
+	disablePublicList = true;
 	disableConnectDialogEditing = false;
 	
 	// Config updates
