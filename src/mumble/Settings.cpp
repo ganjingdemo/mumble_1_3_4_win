@@ -411,7 +411,8 @@ Settings::Settings() {
 	bEnableUIAccess = true;
 
 	for (int i=Log::firstMsgType; i<=Log::lastMsgType; ++i) {
-		qmMessages.insert(i, Settings::LogConsole | Settings::LogBalloon | Settings::LogTTS);
+		//qmMessages.insert(i, Settings::LogConsole | Settings::LogBalloon | Settings::LogTTS);
+		qmMessages.insert(i, Settings::LogNone);
 		qmMessageSounds.insert(i, QString());
 	}
 
@@ -435,15 +436,16 @@ Settings::Settings() {
 	qmMessageSounds[Log::Recording] = QLatin1String(":/RecordingStateChanged.ogg");
 
 	qmMessages[Log::DebugInfo] = Settings::LogConsole;
-	qmMessages[Log::Warning] = Settings::LogConsole | Settings::LogBalloon;
+	qmMessages[Log::CriticalError] = Settings::LogConsole;
+	qmMessages[Log::Warning] = Settings::LogConsole;
 	qmMessages[Log::Information] = Settings::LogConsole;
-	qmMessages[Log::UserJoin] = Settings::LogConsole;
-	qmMessages[Log::UserLeave] = Settings::LogConsole;
-	qmMessages[Log::UserKicked] = Settings::LogConsole;
-	qmMessages[Log::OtherSelfMute] = Settings::LogConsole;
-	qmMessages[Log::OtherMutedOther] = Settings::LogConsole;
-	qmMessages[Log::UserRenamed] = Settings::LogConsole;
-	
+	qmMessages[Log::ServerConnected] = Settings::LogConsole;
+	qmMessages[Log::ServerDisconnected] = Settings::LogConsole;
+
+	qmMessages[Log::PermissionDenied] = Settings::LogConsole;
+	qmMessages[Log::TextMessage] = Settings::LogConsole;
+	qmMessages[Log::PrivateTextMessage] = Settings::LogConsole;
+
 	// Default theme
 	themeName = QLatin1String("Mumble");
 	themeStyleName = QLatin1String("Lite");
