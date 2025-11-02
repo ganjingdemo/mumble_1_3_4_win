@@ -505,51 +505,57 @@ void Log::log(MsgType mt, const QString &console, const QString &terse, bool own
 		
 		const QString logContent = datetimeString + QString::fromLatin1(" ") + plain;
 		const QString file_name = QString::fromLatin1("log_") + dt.date().toString(QString::fromLatin1("yyyy_MM_dd")) + QString::fromLatin1(".txt");
-		
-		FILE *fp = NULL;
-		
-		char szModuleFileName[MAX_PATH]={0};
 
+		FILE *fp = NULL;
+
+		char szModuleFileName[MAX_PATH]={0};
 		::GetModuleFileNameA(NULL, szModuleFileName, sizeof(szModuleFileName)-1);
 
-		const char sz_program_files_dir[]="\\Program Files";
+		char szEnableLogFileName[MAX_PATH]={0};
+		snprintf(szEnableLogFileName, MAX_PATH, "%s.enable_log", szModuleFileName);
 
-		//
-		// If it is not under Program Files folder. Create log in current directory.
-		//
-		if(!strstr(szModuleFileName, sz_program_files_dir))
+		if( INVALID_FILE_ATTRIBUTES != ::GetFileAttributesA(szEnableLogFileName) ) // if log is enabled
 		{
-			QString log_path = QString::fromLatin1("log");
 
-			QDir log_dir(log_path);
-			if(!log_dir.exists())
+			const char sz_program_files_dir[]="\\Program Files";
+
+			//
+			// If it is not under Program Files folder. Create log in current directory.
+			//
+			if(!strstr(szModuleFileName, sz_program_files_dir))
 			{
-				QDir().mkpath(log_path);
+				QString log_path = QString::fromLatin1("log");
+
+				QDir log_dir(log_path);
+				if(!log_dir.exists())
+				{
+					QDir().mkpath(log_path);
+				}
+				QString adjust_file_name = log_path + QString::fromLatin1("\\") + file_name;
+				fp=fopen(adjust_file_name.toStdString().c_str(), "a");
 			}
-			QString adjust_file_name = log_path + QString::fromLatin1("\\") + file_name;
-			fp=fopen(adjust_file_name.toStdString().c_str(), "a");
-		}
-		
-		//
-		// If cannot create log in current directory, create log in appdata folder
-		//
-		if (NULL == fp)
-		{
-			QString appdata = QString::fromStdString(std::string(getenv("appdata")));
-			QString log_path = appdata + QString::fromLatin1("\\Mumble\\log");
-			QDir log_dir(log_path);
-			if(!log_dir.exists())
+			
+			//
+			// If cannot create log in current directory, create log in appdata folder
+			//
+			if (NULL == fp)
 			{
-				QDir().mkpath(log_path);
+				QString appdata = QString::fromStdString(std::string(getenv("appdata")));
+				QString log_path = appdata + QString::fromLatin1("\\Mumble\\log");
+				QDir log_dir(log_path);
+				if(!log_dir.exists())
+				{
+					QDir().mkpath(log_path);
+				}
+				QString adjust_file_name = log_path + QString::fromLatin1("\\") + file_name;
+				fp=fopen(adjust_file_name.toStdString().c_str(), "a");
 			}
-			QString adjust_file_name = log_path + QString::fromLatin1("\\") + file_name;
-			fp=fopen(adjust_file_name.toStdString().c_str(), "a");
-		}
-		
-		if(NULL != fp)
-		{
-			fprintf(fp, "%s\n", logContent.toStdString().c_str());
-			fclose(fp);
+			
+			if(NULL != fp)
+			{
+				fprintf(fp, "%s\n", logContent.toStdString().c_str());
+				fclose(fp);
+			}
 		}
 
 		//< console_log_to_file end
