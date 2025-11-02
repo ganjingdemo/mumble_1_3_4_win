@@ -20,7 +20,7 @@ src/murmur/murmur.rc'''
 
 ORIGINAL_CONTENT_LIST=["1.3.6", "1,3,6,13"]
 
-UPDATE_CONTENT_LIST=["1.3.6", "1,3,6,15"]
+UPDATE_CONTENT_LIST=["1.3.6", "1,3,6,20"]
 
 def update_file(file_name):
 	f = open(file_name,"r")
