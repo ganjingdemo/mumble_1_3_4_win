@@ -5,7 +5,7 @@
 
 # Common OSX overlay settings.
 
-VERSION = 1.3.4
+VERSION = 1.3.6
 
 DEFINES *= VERSION=\\\"$$VERSION\\\"
 

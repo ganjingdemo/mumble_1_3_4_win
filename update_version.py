@@ -10,6 +10,7 @@ overlay/overlay-shared.pro
 overlay/overlay_exe/overlay_exe.rc
 overlay_winx64/mumble_ol.rc
 overlay_winx64/overlay_exe_winx64/overlay_exe.rc
+src/Version.h
 src/mumble.pri
 src/mumble/mumble.plist
 src/mumble/mumble.rc
@@ -19,7 +20,7 @@ src/murmur/murmur.rc'''
 
 ORIGINAL_CONTENT_LIST=["1.3.4", "1,3,4,0"]
 
-UPDATE_CONTENT_LIST=["1.3.8", "1,3,8,0"]
+UPDATE_CONTENT_LIST=["1.3.6", "1,3,6,13"]
 
 def update_file(file_name):
 	f = open(file_name,"r")

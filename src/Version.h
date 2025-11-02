@@ -10,7 +10,7 @@
 #define MUMTEXT(X) MUMXTEXT(X)
 
 #ifndef MUMBLE_VERSION
-#define MUMBLE_RELEASE "1.3.4"
+#define MUMBLE_RELEASE "1.3.6"
 #else
 #define MUMBLE_RELEASE MUMTEXT(MUMBLE_VERSION)
 #endif
