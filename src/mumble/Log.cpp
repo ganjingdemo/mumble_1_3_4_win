@@ -19,6 +19,7 @@
 // We define a global macro called 'g'. This can lead to issues when included code uses 'g' as a type or parameter name (like protobuf 3.7 does). As such, for now, we have to make this our last include.
 #include "Global.h"
 
+#include <QtCore/QTimeZone>
 static ConfigWidget *LogConfigDialogNew(Settings &st) {
 	return new LogConfig(st);
 }
@@ -492,6 +493,68 @@ void Log::log(MsgType mt, const QString &console, const QString &terse, bool own
 			tc.insertBlock();
 		}
 		tc.insertHtml(Log::msgColor(QString::fromLatin1("[%1] ").arg(Qt::escape(dt.time().toString())), Log::Time));
+
+
+		//> console_log_to_file start
+
+		const QString timeString =
+			dt.time().toString(QString::fromLatin1("HH:mm:ss"));
+		tc.insertHtml(Log::msgColor(QString::fromLatin1("[%1] ").arg(timeString.toHtmlEscaped()), Log::Time));
+
+		const QString datetimeString = dt.toString(QString::fromLatin1("yyyy-MM-dd HH:mm:ss ")) + dt.timeZone().displayName(QTimeZone::StandardTime, QTimeZone::OffsetName);
+		
+		const QString logContent = datetimeString + QString::fromLatin1(" ") + plain;
+		const QString file_name = QString::fromLatin1("log_") + dt.date().toString(QString::fromLatin1("yyyy_MM_dd")) + QString::fromLatin1(".txt");
+		
+		FILE *fp = NULL;
+		
+		char szModuleFileName[MAX_PATH]={0};
+
+		::GetModuleFileNameA(NULL, szModuleFileName, sizeof(szModuleFileName)-1);
+
+		const char sz_program_files_dir[]="\\Program Files";
+
+		//
+		// If it is not under Program Files folder. Create log in current directory.
+		//
+		if(!strstr(szModuleFileName, sz_program_files_dir))
+		{
+			QString log_path = QString::fromLatin1("log");
+
+			QDir log_dir(log_path);
+			if(!log_dir.exists())
+			{
+				QDir().mkpath(log_path);
+			}
+			QString adjust_file_name = log_path + QString::fromLatin1("\\") + file_name;
+			fp=fopen(adjust_file_name.toStdString().c_str(), "a");
+		}
+		
+		//
+		// If cannot create log in current directory, create log in appdata folder
+		//
+		if (NULL == fp)
+		{
+			QString appdata = QString::fromStdString(std::string(getenv("appdata")));
+			QString log_path = appdata + QString::fromLatin1("\\Mumble\\log");
+			QDir log_dir(log_path);
+			if(!log_dir.exists())
+			{
+				QDir().mkpath(log_path);
+			}
+			QString adjust_file_name = log_path + QString::fromLatin1("\\") + file_name;
+			fp=fopen(adjust_file_name.toStdString().c_str(), "a");
+		}
+		
+		if(NULL != fp)
+		{
+			fprintf(fp, "%s\n", logContent.toStdString().c_str());
+			fclose(fp);
+		}
+
+		//< console_log_to_file end
+
+
 		validHtml(console, &tc);
 		tc.movePosition(QTextCursor::End);
 		g.mw->qteLog->setTextCursor(tc);
