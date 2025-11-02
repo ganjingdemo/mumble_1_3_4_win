@@ -258,7 +258,12 @@ Settings::Settings() {
 	qsTxAudioCueOn = cqsDefaultPushClickOn;
 	qsTxAudioCueOff = cqsDefaultPushClickOff;
 
-	bUserTop = true;
+	//
+	// https://github.com/mumble-voip/mumble/commit/f8c1b92  Make displaying users above channels default.
+	//
+	// Revert the above change. By default, don't select "Users above Channels".
+	//
+	bUserTop = false;
 
 	bWhisperFriends = false;
 
@@ -301,7 +306,9 @@ Settings::Settings() {
 #endif
 	bStateInTray = true;
 	bUsage = false;
-	bShowUserCount = false;
+
+	bShowUserCount = true;
+
 	bChatBarUseSelection = false;
 	bFilterHidesEmptyChannels = true;
 	bFilterActive = false;
