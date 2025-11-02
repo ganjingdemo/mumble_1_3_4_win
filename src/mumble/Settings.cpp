@@ -266,13 +266,15 @@ Settings::Settings() {
 	pttHold = 0;
 	bExpert = true;
 
-#ifdef NO_UPDATE_CHECK
+//#ifdef NO_UPDATE_CHECK
+
 	bUpdateCheck = false;
 	bPluginCheck = false;
-#else
-	bUpdateCheck = true;
-	bPluginCheck = true;
-#endif
+
+//#else
+	//bUpdateCheck = true;
+	//bPluginCheck = true;
+//#endif
 
 #if QT_VERSION >= 0x050000
 	qsImagePath = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);
@@ -298,7 +300,7 @@ Settings::Settings() {
 	bHideInTray = !isUnityDesktop && QSystemTrayIcon::isSystemTrayAvailable();
 #endif
 	bStateInTray = true;
-	bUsage = true;
+	bUsage = false;
 	bShowUserCount = false;
 	bChatBarUseSelection = false;
 	bFilterHidesEmptyChannels = true;
