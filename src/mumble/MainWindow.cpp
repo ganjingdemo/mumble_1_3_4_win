@@ -2833,6 +2833,8 @@ void MainWindow::serverConnected() {
 #endif
 	g.iCodecBeta = 0;
 
+	g.bAutoExpandChannel = true;
+
 #ifdef Q_OS_MAC
 	// Suppress AppNap while we're connected to a server.
 	MUSuppressAppNap(true);

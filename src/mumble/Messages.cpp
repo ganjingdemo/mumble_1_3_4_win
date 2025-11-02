@@ -174,6 +174,9 @@ void MainWindow::msgServerConfig(const MumbleProto::ServerConfig &msg) {
 		g.uiImageLength = msg.image_message_length();
 	if (msg.has_max_users())
 		g.uiMaxUsers = msg.max_users();
+
+	// After MainWindow::msgServerConfig, do not allow channel auto expand
+	g.bAutoExpandChannel  = false;
 }
 
 void MainWindow::msgPermissionDenied(const MumbleProto::PermissionDenied &msg) {

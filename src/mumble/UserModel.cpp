@@ -936,8 +936,13 @@ void UserModel::moveUser(ClientUser *p, Channel *np) {
 	}
 
 	if (g.s.ceExpand == Settings::ChannelsWithUsers) {
-		expandAll(np);
-		collapseEmpty(oc);
+		//
+		// After server connected, only allow channel auto expand in a certain period of time when channel expand policy is Settings::ChannelsWithUsers
+		//
+		if(g.bAutoExpandChannel) {
+			expandAll(np);
+			collapseEmpty(oc);
+		}
 	}
 
 	updateOverlay();

@@ -110,6 +110,8 @@ Global::Global() {
 
 	bHappyEaster = false;
 
+	bAutoExpandChannel = true;
+
 	bQuit = false;
 
 	QStringList qsl;

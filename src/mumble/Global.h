@@ -94,6 +94,9 @@ public:
 	bool bQuit;
 
 	bool bHappyEaster;
+
+	bool bAutoExpandChannel;
+
 	static const char ccHappyEaster[];
 
 	Global();
