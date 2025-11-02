@@ -18,9 +18,9 @@ src/mumble/mumble_dll.rc
 src/murmur/murmur.plist
 src/murmur/murmur.rc'''
 
-ORIGINAL_CONTENT_LIST=["1.3.4", "1,3,4,0"]
+ORIGINAL_CONTENT_LIST=["1.3.6", "1,3,6,13"]
 
-UPDATE_CONTENT_LIST=["1.3.6", "1,3,6,13"]
+UPDATE_CONTENT_LIST=["1.3.6", "1,3,6,15"]
 
 def update_file(file_name):
 	f = open(file_name,"r")
@@ -28,10 +28,15 @@ def update_file(file_name):
 	f.close()
 
 	bNeedUpdate = False
-	for one_content in ORIGINAL_CONTENT_LIST:
+
+	for i in range(len(ORIGINAL_CONTENT_LIST)):
+
+		one_content = ORIGINAL_CONTENT_LIST[i]
+
 		if content.find(one_content)>=0:
-			bNeedUpdate = True
-			break
+			if one_content != UPDATE_CONTENT_LIST[i]:
+				bNeedUpdate = True
+				break
 
 	if not bNeedUpdate:
 		print("No need to update: " + file_name)
