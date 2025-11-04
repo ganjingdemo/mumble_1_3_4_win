@@ -498,7 +498,8 @@ void Log::log(MsgType mt, const QString &console, const QString &terse, bool own
 
 		const QString timeString =
 			dt.time().toString(QString::fromLatin1("HH:mm:ss"));
-		tc.insertHtml(Log::msgColor(QString::fromLatin1("[%1] ").arg(timeString.toHtmlEscaped()), Log::Time));
+
+		tc.insertHtml(Log::msgColor(QString::fromLatin1("<br>[%1] ").arg(timeString.toHtmlEscaped()), Log::Time));
 
 		const QString datetimeString = dt.toString(QString::fromLatin1("yyyy-MM-dd HH:mm:ss ")) + dt.timeZone().displayName(QTimeZone::StandardTime, QTimeZone::OffsetName);
 		
