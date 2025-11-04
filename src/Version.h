@@ -15,6 +15,8 @@
 #define MUMBLE_RELEASE MUMTEXT(MUMBLE_VERSION)
 #endif
 
+#define MUMBLE_RELEASE_DETAIL "1.3.6.31"
+
 class MumbleVersion {
 	public:
 		static unsigned int getRaw(const QString &version = QLatin1String(MUMTEXT(MUMBLE_VERSION_STRING)));

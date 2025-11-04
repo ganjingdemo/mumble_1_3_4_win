@@ -211,7 +211,7 @@ void MainWindow::createActions() {
 	gsVolumeDown->setObjectName(QLatin1String("VolumeDown"));
 
 	qstiIcon = new QSystemTrayIcon(qiIcon, this);
-	qstiIcon->setToolTip(tr("Mumble -- %1").arg(QLatin1String(MUMBLE_RELEASE)));
+	qstiIcon->setToolTip(tr("Mumble -- %1").arg(QLatin1String(MUMBLE_RELEASE_DETAIL)));
 	qstiIcon->setObjectName(QLatin1String("Icon"));
 
 	gsWhisper = new GlobalShortcut(this, idx++, tr("Whisper/Shout"), QVariant::fromValue(ShortcutTarget()));
@@ -381,7 +381,7 @@ void MainWindow::updateWindowTitle() {
 	} else {
 		title = tr("Mumble -- %1");
 	}
-	setWindowTitle(title.arg(QLatin1String(MUMBLE_RELEASE)));
+	setWindowTitle(title.arg(QLatin1String(MUMBLE_RELEASE_DETAIL)));
 }
 
 void MainWindow::updateToolbar() {
@@ -3057,7 +3057,7 @@ void MainWindow::serverDisconnected(QAbstractSocket::SocketError err, QString re
 			}
 		}
 	}
-	qstiIcon->setToolTip(tr("Mumble -- %1").arg(QLatin1String(MUMBLE_RELEASE)));
+	qstiIcon->setToolTip(tr("Mumble -- %1").arg(QLatin1String(MUMBLE_RELEASE_DETAIL)));
 	AudioInput::setMaxBandwidth(-1);
 }
 
