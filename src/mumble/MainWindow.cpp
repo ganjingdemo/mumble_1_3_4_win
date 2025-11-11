@@ -473,10 +473,10 @@ void MainWindow::closeEvent(QCloseEvent *e) {
 	}
 
 
-	//if (m_searchDialog) {
+	if (m_searchDialog) {
 		// Save position of search dialog
-		// g.s.searchDialogPosition = { m_searchDialog->x(), m_searchDialog->y() };
-	//}
+		g.s.searchDialogPosition = { m_searchDialog->x(), m_searchDialog->y() };
+	}
 	if (qwPTTButtonWidget) {
 		qwPTTButtonWidget->close();
 		qwPTTButtonWidget->deleteLater();
@@ -820,12 +820,12 @@ void MainWindow::toggleSearchDialogVisibility() {
 	if (!m_searchDialog) {
 		m_searchDialog = new Search::SearchDialog(this);
 
-		//QPoint position = g.s.searchDialogPosition;
+		QPoint position = g.s.searchDialogPosition;
 
-		//if (position == Settings::UNSPECIFIED_POSITION) {
+		if (position == Settings::UNSPECIFIED_POSITION) {
 			// Get MainWindow's position on screen
-		QPoint position = mapToGlobal(QPoint(0, 0));
-		//}
+			position = mapToGlobal(QPoint(0, 0));
+		}
 
 		if (Mumble::QtUtils::positionIsOnScreen(position)) {
 			// Move the search dialog to the same origin as the MainWindow is

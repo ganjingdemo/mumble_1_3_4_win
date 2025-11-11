@@ -820,6 +820,13 @@ void Settings::load(QSettings* settings_ptr) {
 	SAVELOAD(bEnableWinHooks, "winhooks");
 	SAVELOAD(bDirectInputVerboseLogging, "shortcut/windows/directinput/verboselogging");
 	SAVELOAD(bEnableUIAccess, "shortcut/windows/uiaccess/enable");
+	// Search options
+	SAVELOAD(searchForUsers, "search/search_for_users");
+	SAVELOAD(searchForChannels, "search/search_for_channels");
+	SAVELOAD(searchCaseSensitive, "search/search_case_sensitive");
+	SAVELOAD(searchAsRegex, "search/search_as_regex");
+	SAVELOAD(searchOptionsShown, "search/search_options_shown");
+	SAVELOAD(searchDialogPosition, "search/search_dialog_position");
 
 	int nshorts = settings_ptr->beginReadArray(QLatin1String("shortcuts"));
 	for (int i=0; i<nshorts; i++) {
@@ -1157,6 +1164,12 @@ void Settings::save() {
 	SAVELOAD(bEnableWinHooks, "winhooks");
 	SAVELOAD(bDirectInputVerboseLogging, "shortcut/windows/directinput/verboselogging");
 	SAVELOAD(bEnableUIAccess, "shortcut/windows/uiaccess/enable");
+	// Search options
+	SAVELOAD(searchForUsers, "search/search_for_users");
+	SAVELOAD(searchForChannels, "search/search_for_channels");
+	SAVELOAD(searchCaseSensitive, "search/search_case_sensitive");
+	SAVELOAD(searchAsRegex, "search/search_as_regex");
+	SAVELOAD(searchDialogPosition, "search/search_dialog_position");
 
 	settings_ptr->beginWriteArray(QLatin1String("shortcuts"));
 	int idx = 0;
