@@ -15,7 +15,7 @@
 #define MUMBLE_RELEASE MUMTEXT(MUMBLE_VERSION)
 #endif
 
-#define MUMBLE_RELEASE_DETAIL "1.3.6.31"
+#define MUMBLE_RELEASE_DETAIL "1.3.6.35"
 
 class MumbleVersion {
 	public:
