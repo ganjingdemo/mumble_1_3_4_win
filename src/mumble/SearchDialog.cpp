@@ -120,12 +120,12 @@ SearchDialog::SearchDialog(QWidget *parent) : QWidget(parent), m_itemDelegate(ne
 	m_searchFieldStyleWrapper = MultiStyleWidgetWrapper(searchField);
 
 	// Init options
-	//userOption->setChecked(g.s.searchForUsers);
-	//channelOption->setChecked(g.s.searchForChannels);
-	//caseSensitiveOption->setChecked(g.s.searchCaseSensitive);
-	//regexOption->setChecked(g.s.searchAsRegex);
+	userOption->setChecked(g.s.searchForUsers);
+	channelOption->setChecked(g.s.searchForChannels);
+	caseSensitiveOption->setChecked(g.s.searchCaseSensitive);
+	regexOption->setChecked(g.s.searchAsRegex);
 
-	//searchOptionBox->setVisible(g.s.searchOptionsShown);
+	searchOptionBox->setVisible(g.s.searchOptionsShown);
 
 	// This makes sure that our contextMenuEvent function gets called for creating the context menu
 	searchResultTree->setContextMenuPolicy(Qt::DefaultContextMenu);
