@@ -16,6 +16,7 @@
 #include <QtGui/QFont>
 #include <QtNetwork/QSslCertificate>
 #include <QtNetwork/QSslKey>
+#include "SearchDialog.h"
 
 // Global helper classes to spread variables around across threads
 // especially helpful to initialize things like the stored
@@ -278,6 +279,8 @@ struct Settings {
 
 	enum MessageLog { LogNone = 0x00, LogConsole = 0x01, LogTTS = 0x02, LogBalloon = 0x04, LogSoundfile = 0x08, LogHighlight = 0x10 };
 	int iMaxLogBlocks;
+	static const QPoint UNSPECIFIED_POSITION;
+	QString qsHierarchyChannelSeparator;
 	QMap<int, QString> qmMessageSounds;
 	QMap<int, quint32> qmMessages;
 
@@ -312,6 +315,14 @@ struct Settings {
 	QByteArray qbaConnectDialogHeader, qbaConnectDialogGeometry;
 	bool bShowContextMenuInMenuBar;
 
+	bool searchForUsers;
+	bool searchForChannels;
+	bool searchCaseSensitive;
+	bool searchAsRegex;
+	bool searchOptionsShown;
+	Search::SearchDialog::UserAction searchUserAction;
+	Search::SearchDialog::ChannelAction searchChannelAction;
+	QPoint searchDialogPosition;
 	QString qsUsername;
 	QString qsLastServer;
 	ServerShow ssFilter;

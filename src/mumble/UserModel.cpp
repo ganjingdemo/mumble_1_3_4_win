@@ -328,6 +328,17 @@ QString UserModel::stringIndex(const QModelIndex &idx) const {
 		return QString::fromLatin1("C:%1 [%2,%3]").arg(item->cChan->qsName).arg(idx.row()).arg(idx.column());
 }
 
+QModelIndex UserModel::getSelectedIndex() const {
+	QTreeView *v = g.mw->qtvUsers;
+	if (v) {
+		QItemSelectionModel *sel = v->selectionModel();
+
+		return sel->currentIndex();
+	}
+
+	return QModelIndex();
+}
+
 QVariant UserModel::data(const QModelIndex &idx, int role) const {
 	if (!idx.isValid())
 		return QVariant();
@@ -1277,6 +1288,30 @@ ClientUser *UserModel::getUser(const QString &hash) const {
 	return qmHashes.value(hash);
 }
 
+ClientUser *UserModel::getSelectedUser() const {
+	QModelIndex selected = getSelectedIndex();
+
+	if (selected.isValid()) {
+		ModelItem *item = static_cast< ModelItem * >(selected.internalPointer());
+
+		return item->pUser;
+	}
+
+	return nullptr;
+}
+
+void UserModel::setSelectedUser(unsigned int session) {
+	QModelIndex idx = index(ClientUser::get(session));
+
+	if (!idx.isValid()) {
+		return;
+	}
+
+	QTreeView *v = g.mw->qtvUsers;
+	if (v) {
+		v->setCurrentIndex(idx);
+	}
+}
 Channel *UserModel::getChannel(const QModelIndex &idx) const {
 	if (! idx.isValid())
 		return NULL;
@@ -1290,6 +1325,30 @@ Channel *UserModel::getChannel(const QModelIndex &idx) const {
 		return item->cChan;
 }
 
+Channel *UserModel::getSelectedChannel() const {
+	QModelIndex selected = getSelectedIndex();
+
+	if (selected.isValid()) {
+		ModelItem *item = static_cast< ModelItem * >(selected.internalPointer());
+
+		return item->cChan;
+	}
+
+	return nullptr;
+}
+
+void UserModel::setSelectedChannel(int id) {
+	QModelIndex idx = index(Channel::get(id));
+
+	if (!idx.isValid()) {
+		return;
+	}
+
+	QTreeView *v = g.mw->qtvUsers;
+	if (v) {
+		v->setCurrentIndex(idx);
+	}
+}
 Channel *UserModel::getSubChannel(Channel *p, int idx) const {
 	ModelItem *item=ModelItem::c_qhChannels.value(p);
 	if (! item)

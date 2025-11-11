@@ -43,6 +43,9 @@ class Channel;
 class UserInformation;
 class VoiceRecorderDialog;
 class PTTButtonWidget;
+namespace Search {
+class SearchDialog;
+};
 
 struct ShortcutTarget;
 
@@ -79,6 +82,7 @@ class MainWindow : public QMainWindow, public MessageHandler, public Ui::MainWin
 		GlobalShortcut *gsMinimal, *gsVolumeUp, *gsVolumeDown, *gsWhisper, *gsLinkChannel;
 		GlobalShortcut *gsCycleTransmitMode, *gsTransmitModePushToTalk, *gsTransmitModeContinuous, *gsTransmitModeVAD;
 		GlobalShortcut *gsSendTextMessage, *gsSendClipboardTextMessage;
+        GlobalShortcut *gsToggleSearch;
 		DockTitleBar *dtbLogDockTitle, *dtbChatDockTitle;
 
 		ACLEditor *aclEdit;
@@ -154,6 +158,8 @@ class MainWindow : public QMainWindow, public MessageHandler, public Ui::MainWin
 		QAction *qaTransmitMode;
 		QAction *qaTransmitModeSeparator;
 
+        Search::SearchDialog *m_searchDialog = nullptr;
+
 		void createActions();
 		void setupGui();
 		void updateWindowTitle();
@@ -213,6 +219,7 @@ class MainWindow : public QMainWindow, public MessageHandler, public Ui::MainWin
 		void on_qaUserFriendUpdate_triggered();
 		void qmChannel_aboutToShow();
 		void on_qaChannelJoin_triggered();
+		void on_qaUserJoin_triggered();
 		void on_qaChannelAdd_triggered();
 		void on_qaChannelRemove_triggered();
 		void on_qaChannelACL_triggered();
@@ -264,6 +271,9 @@ class MainWindow : public QMainWindow, public MessageHandler, public Ui::MainWin
 		void on_gsTransmitModeVAD_triggered(bool, QVariant);
 		void on_gsSendTextMessage_triggered(bool, QVariant);
 		void on_gsSendClipboardTextMessage_triggered(bool, QVariant);
+
+        void on_gsToggleSearch_triggered(bool, QVariant);
+
 		void on_Reconnect_timeout();
 		void on_Icon_activated(QSystemTrayIcon::ActivationReason);
 		void voiceRecorderDialog_finished(int);
@@ -295,6 +305,9 @@ class MainWindow : public QMainWindow, public MessageHandler, public Ui::MainWin
 		/// Updates the user's image directory to the given path (any included
 		/// filename is discarded).
 		void updateImagePath(QString filepath) const;
+		// Callback the search action being triggered
+		void on_qaSearch_triggered();
+		void toggleSearchDialogVisibility();
 
 	public:
 		MainWindow(QWidget *parent);

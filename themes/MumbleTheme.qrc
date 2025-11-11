@@ -31,6 +31,7 @@
     <file alias="layout_stacked.svg">Mumble/layout_stacked.svg</file>
     <file alias="Dark.qss">Mumble/Dark.qss</file>
     <file alias="Lite.qss">Mumble/Lite.qss</file>
+    <file alias="magnifier.svg">Mumble/magnifier.svg</file>
     <file alias="mumble.ico">Mumble/mumble.ico</file>
     <file alias="mumble.osx.png">Mumble/mumble.osx.png</file>
     <file alias="mumble.png">Mumble/mumble.png</file>

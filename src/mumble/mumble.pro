@@ -139,9 +139,16 @@ HEADERS *= BanEditor.h \
     Themes.h \
     OverlayPositionableItem.h \
     widgets/MUComboBox.h \
+    widgets/SearchDialogTree.h \
+    widgets/RichTextItemDelegate.h \
+    widgets/SearchDialogItemDelegate.h \
+    widgets/MultiStyleWidgetWrapper.h \
+    SearchDialog.h \
     DeveloperConsole.h \
     PathListWidget.h \
     XMLTools.h \
+    QtUtils.h \
+    QtWidgetUtils.h \
     SvgIcon.h
 
 SOURCES *= BanEditor.cpp \
@@ -160,6 +167,7 @@ SOURCES *= BanEditor.cpp \
     OpusCodec.cpp \
     CustomElements.cpp \
     MainWindow.cpp \
+    SearchDialog.cpp \
     ServerHandler.cpp \
     About.cpp \
     ConnectDialog.cpp \
@@ -209,9 +217,15 @@ SOURCES *= BanEditor.cpp \
     Themes.cpp \
     OverlayPositionableItem.cpp \
     widgets/MUComboBox.cpp \
+    widgets/RichTextItemDelegate.cpp \
+    widgets/SearchDialogItemDelegate.cpp \
+    widgets/SearchDialogTree.cpp \
+    widgets/MultiStyleWidgetWrapper.cpp \
     DeveloperConsole.cpp \
     PathListWidget.cpp \
     XMLTools.cpp \
+    QtUtils.cpp \
+    QtWidgetUtils.cpp \
     SvgIcon.cpp
 
 CONFIG(qtspeech) {
@@ -229,6 +243,7 @@ include(flags/mumble_flags.pri)
 
 FORMS *= ConfigDialog.ui \
     MainWindow.ui \
+    SearchDialog.ui \
     ConnectDialog.ui \
     ConnectDialogEdit.ui \
     BanEditor.ui \

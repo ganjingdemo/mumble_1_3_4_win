@@ -82,6 +82,10 @@ class UserModel : public QAbstractItemModel {
 		ModelItem *moveItem(ModelItem *oldparent, ModelItem *newparent, ModelItem *item);
 
 		QString stringIndex(const QModelIndex &index) const;
+
+	/// @returns The QModelIndex that is currently selected. If there is no selection, the returned index
+	/// 	is invalid.
+	QModelIndex getSelectedIndex() const;
 	public:
 		UserModel(QObject *parent = 0);
 		~UserModel() Q_DECL_OVERRIDE;
@@ -106,8 +110,22 @@ class UserModel : public QAbstractItemModel {
 		ClientUser *getUser(const QModelIndex &idx) const;
 		ClientUser *getUser(const QString &hash) const;
 
+		/// @returns A pointer to the currently selected User or nullptr if there is none
+		ClientUser *getSelectedUser() const;
+		/// Sets the selection to the User with the given session
+		///
+		/// @param session The session ID of the respective User
+		void setSelectedUser(unsigned int session);
+
 		Channel *addChannel(int id, Channel *p, const QString &name);
 		Channel *getChannel(const QModelIndex &idx) const;
+
+		/// @returns A pointer to the currently selected Channel or nullptr if there is none
+		Channel *getSelectedChannel() const;
+		/// Sets the selection to the Channel with the given ID
+		///
+		/// @param session The ID of the respective Channel
+		void setSelectedChannel(int id);
 
 		Channel *getSubChannel(Channel *p, int idx) const;
 

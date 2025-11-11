@@ -29,7 +29,9 @@
 #include "OverlayClient.h"
 #include "Plugins.h"
 #include "PTTButtonWidget.h"
+#include "QtWidgetUtils.h"
 #include "RichTextEditor.h"
+#include "SearchDialog.h"
 #include "ServerHandler.h"
 #include "TextMessage.h"
 #include "Tokens.h"
@@ -239,6 +241,10 @@ void MainWindow::createActions() {
 	gsSendClipboardTextMessage=new GlobalShortcut(this, idx++, tr("Send Clipboard Text Message", "Global Shortcut"));
 	gsSendClipboardTextMessage->setObjectName(QLatin1String("gsSendClipboardTextMessage"));
 	gsSendClipboardTextMessage->qsWhatsThis = tr("This will send your Clipboard content to the channel you are currently in.", "Global Shortcut");
+	gsToggleSearch = new GlobalShortcut(this, idx++, tr("Toggle search dialog", "Global Shortcut"));
+	gsToggleSearch->setObjectName(QLatin1String("gsToggleSearch"));
+	gsToggleSearch->qsWhatsThis =
+		tr("This will open or close the search dialog depending on whether it is currently opened already");
 
 #ifndef Q_OS_MAC
 	qstiIcon->show();
@@ -466,6 +472,11 @@ void MainWindow::closeEvent(QCloseEvent *e) {
 		g.s.qbaHeaderState = qtvUsers->header()->saveState();
 	}
 
+
+	//if (m_searchDialog) {
+		// Save position of search dialog
+		// g.s.searchDialogPosition = { m_searchDialog->x(), m_searchDialog->y() };
+	//}
 	if (qwPTTButtonWidget) {
 		qwPTTButtonWidget->close();
 		qwPTTButtonWidget->deleteLater();
@@ -800,6 +811,30 @@ void MainWindow::updateImagePath(QString filepath) const {
 	g.s.qsImagePath = fi.absolutePath();
 }
 
+
+void MainWindow::on_qaSearch_triggered() {
+	toggleSearchDialogVisibility();
+}
+
+void MainWindow::toggleSearchDialogVisibility() {
+	if (!m_searchDialog) {
+		m_searchDialog = new Search::SearchDialog(this);
+
+		//QPoint position = g.s.searchDialogPosition;
+
+		//if (position == Settings::UNSPECIFIED_POSITION) {
+			// Get MainWindow's position on screen
+		QPoint position = mapToGlobal(QPoint(0, 0));
+		//}
+
+		if (Mumble::QtUtils::positionIsOnScreen(position)) {
+			// Move the search dialog to the same origin as the MainWindow is
+			m_searchDialog->move(position);
+		}
+	}
+
+	m_searchDialog->setVisible(!m_searchDialog->isVisible());
+}
 static void recreateServerHandler() {
 	ServerHandlerPtr sh = g.sh;
 	if (sh && sh->isRunning()) {
@@ -2022,6 +2057,17 @@ void MainWindow::on_qaChannelJoin_triggered() {
 	}
 }
 
+void MainWindow::on_qaUserJoin_triggered() {
+	const ClientUser *user = getContextMenuUser();
+
+	if (user) {
+		const Channel *channel = user->cChannel;
+
+		if (channel) {
+			g.sh->joinChannel(g.uiSession, channel->iId);
+		}
+	}
+}
 void MainWindow::on_qaChannelFilter_triggered() {
 	Channel *c = getContextMenuChannel();
 	
@@ -2792,6 +2838,14 @@ void MainWindow::on_gsSendClipboardTextMessage_triggered(bool down, QVariant) {
 	sendChatbarMessage(QApplication::clipboard()->text());
 }
 
+
+void MainWindow::on_gsToggleSearch_triggered(bool down, QVariant) {
+	if (!down) {
+		return;
+	}
+
+	toggleSearchDialogVisibility();
+}
 void MainWindow::whisperReleased(QVariant scdata) {
 	if (g.iPushToTalk <= 0)
 		return;

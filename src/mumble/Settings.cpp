@@ -14,6 +14,12 @@
 #include "SSL.h"
 
 #include "../../overlay/overlay.h"
+#include <limits>
+
+
+
+const QPoint Settings::UNSPECIFIED_POSITION =
+	QPoint(std::numeric_limits< int >::min(), std::numeric_limits< int >::max());
 
 bool Shortcut::isServerSpecific() const {
 	if (qvData.canConvert<ShortcutTarget>()) {
@@ -409,6 +415,7 @@ Settings::Settings() {
 
 	iMaxLogBlocks = 0;
 
+	qsHierarchyChannelSeparator = QLatin1String("/");
 	bShortcutEnable = true;
 	bSuppressMacEventTapWarning = false;
 	bEnableEvdev = false;
@@ -455,6 +462,15 @@ Settings::Settings() {
 	qmMessages[Log::TextMessage] = Settings::LogConsole;
 	qmMessages[Log::PrivateTextMessage] = Settings::LogConsole;
 
+	// Default search options
+	searchForUsers       = true;
+	searchForChannels    = true;
+	searchCaseSensitive  = false;
+	searchAsRegex        = false;
+	searchOptionsShown   = false;
+	searchUserAction     = Search::SearchDialog::UserAction::JOIN;
+	searchChannelAction  = Search::SearchDialog::ChannelAction::JOIN;
+	searchDialogPosition = Settings::UNSPECIFIED_POSITION;
 	// Default theme
 	themeName = QLatin1String("Mumble");
 	themeStyleName = QLatin1String("Lite");

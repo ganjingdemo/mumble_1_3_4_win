@@ -185,6 +185,8 @@
    <addaction name="qaConfigDialog"/>
    <addaction name="separator"/>
    <addaction name="qaFilterToggle"/>
+   <addaction name="separator"/>
+   <addaction name="qaSearch"/>
   </widget>
   <action name="qaQuit">
    <property name="text">
@@ -917,6 +919,22 @@ the channel's context menu.</string>
     <string>Shows the main Mumble window.</string>
    </property>
   </action>
+  <action name="qaSearch">
+   <property name="icon">
+    <iconset>
+     <normaloff>skin:magnifier.svg</normaloff>skin:magnifier.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+   <property name="toolTip">
+    <string>Search for a user or channel (Ctrl+F)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+
  </widget>
  <customwidgets>
   <customwidget>
