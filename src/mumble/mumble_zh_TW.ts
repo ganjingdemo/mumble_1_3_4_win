@@ -8069,6 +8069,72 @@ To upgrade these files to their latest versions, click the button below.</source
     </message>
 </context>
 <context>
+    <name>Search::SearchDialog</name>
+    <message>
+        <source>None</source>
+        <translation>無</translation>
+    </message>
+    <message>
+        <source>Join</source>
+        <translation>加入</translation>
+    </message>
+</context>
+<context>
+    <name>SearchDialog</name>
+    <message>
+        <source>Search</source>
+        <translation>搜索</translation>
+    </message>
+    <message>
+        <source>Enter search String...</source>
+        <translation>輸入搜索關鍵字……</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation>選項</translation>
+    </message>
+    <message>
+        <source>Whether to search for users</source>
+        <translation>是否搜索用戶</translation>
+    </message>
+    <message>
+        <source>&amp;Users</source>
+        <translation>用戶(&amp;U)</translation>
+    </message>
+    <message>
+        <source>Whether the search should be performed case-sensitively</source>
+        <translation>搜索是否區分大小寫</translation>
+    </message>
+    <message>
+        <source>Case-&amp;sensitive</source>
+        <translation>區分大小寫(&amp;S)</translation>
+    </message>
+    <message>
+        <source>Options:</source>
+        <translation>選項：</translation>
+    </message>
+    <message>
+        <source>Whether the search string should be interpreted as a regular expression</source>
+        <translation>搜索關鍵字是否應該作為正則表達式解析</translation>
+    </message>
+    <message>
+        <source>&amp;RegEx</source>
+        <translation>正則表達式(&amp;R)</translation>
+    </message>
+    <message>
+        <source>&amp;Channels</source>
+        <translation>頻道(&amp;C)</translation>
+    </message>
+    <message>
+        <source>Search for:</source>
+        <translation>搜索範圍：</translation>
+    </message>
+    <message>
+        <source>Whether to search for channels</source>
+        <translation>是否搜索頻道</translation>
+    </message>
+</context>
+<context>
     <name>ServerHandler</name>
     <message>
         <location filename="ServerHandler.cpp" line="+301"/>
