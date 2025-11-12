@@ -4454,32 +4454,32 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>List users above subchannels (requires restart).</source>
-        <translation>將用戶顯示在子頻道上方（需要重啟）。</translation>
+        <translation>顯示頻道內使用者清單(需重新啟動)。</translation>
     </message>
     <message>
         <location/>
         <source>&lt;b&gt;If set, users will be shown above subchannels in the channel view.&lt;/b&gt;&lt;br /&gt;A restart of Mumble is required to see the change.</source>
-        <translation>&lt;b&gt;如果選中，頻道的用戶將會顯示在其子頻道的上方。&lt;/b&gt;&lt;br /&gt;此更改需要重啟 Mumble 才能生效。</translation>
+        <translation>&lt;b&gt;啟用時在各子頻道下將各自顯示使用者名單&lt;/b&gt;&lt;br /&gt;需要重新啟動。</translation>
     </message>
     <message>
         <location/>
         <source>Users above Channels</source>
-        <translation>用戶顯示在頻道上方</translation>
+        <translation>顯示頻道內使用者清單</translation>
     </message>
     <message>
         <location/>
         <source>&lt;b&gt;If set, will verify you want to quit if connected.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;如果選中，在您已連接服務器時退出需要確認。&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;退出程式時如果與伺服器持續連線則進行重複確認。&lt;/b&gt;</translation>
     </message>
     <message>
         <location/>
         <source>Show number of users in each channel</source>
-        <translation>顯示每個頻道的用戶數</translation>
+        <translation>顯示每一個頻道的使用人數</translation>
     </message>
     <message>
         <location/>
         <source>Show channel user count</source>
-        <translation>顯示頻道用戶數</translation>
+        <translation>顯示頻道人數</translation>
     </message>
     <message>
         <location/>
@@ -4499,12 +4499,12 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Look and Feel</source>
-        <translation>外觀和體驗</translation>
+        <translation>操作界面</translation>
     </message>
     <message>
         <location/>
         <source>Layout</source>
-        <translation>布局</translation>
+        <translation>界面布局</translation>
     </message>
     <message>
         <location/>
@@ -4524,7 +4524,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Custom</source>
-        <translation>自定義</translation>
+        <translation>自訂</translation>
     </message>
     <message>
         <location/>
@@ -4535,7 +4535,7 @@ This field describes the size of an LCD device. The size is given either in pixe
         <location/>
         <source>This sets the behavior of channel drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the channel without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the channel.</source>
         <oldsource>This sets the behavior of channel drags; it can be used to prevent accidental dragging. &lt;i&gt;Move Channel&lt;/i&gt; moves the channel without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the channel.</oldsource>
-        <translation>設置頻道被拖動時的行為，用於防止意外的拖動。&lt;i&gt;移動&lt;/i&gt;表示立刻移動頻道而不需要任何確認。&lt;i&gt;無動作&lt;/i&gt;表示不做任何改變並顯示一條錯誤消息。&lt;i&gt;詢問&lt;/i&gt;表示彈出一個消息框以確認您是否確實要移動頻道。</translation>
+        <translation>This sets the behavior of channel drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the channel without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the channel.</translation>
     </message>
     <message>
         <location/>
@@ -4570,17 +4570,17 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>&lt;b&gt;If set, minimizing the Mumble main window will cause it to be hidden and accessible only from the tray. Otherwise, it will be minimized as a window normally would.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;如果選中，最小化 Mumble 主窗口時將使得它被隱藏到系統托盤。否則將以普通窗口方式最小化。&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;如果選中，最小化 Mumble 主窗口時將使得它被隱藏到系統托盤。否則，它將會像通常一樣被最小化。&lt;/b&gt;</translation>
     </message>
     <message>
         <location/>
         <source>Hide in tray when minimized</source>
-        <translation>最小化時隱藏到系統托盤</translation>
+        <translation>最小化時隱藏到系統列</translation>
     </message>
     <message>
         <location/>
         <source>Hide the main Mumble window in the tray when it is minimized.</source>
-        <translation>在最小化時隱藏 Mumble 主窗口到系統托盤。</translation>
+        <translation>最小化時，隱藏 Mumble 主界面到系統列。</translation>
     </message>
     <message>
         <location/>
@@ -8242,17 +8242,17 @@ To upgrade these files to their latest versions, click the button below.</source
     <message>
         <location filename="ConnectDialog.cpp" line="-761"/>
         <source>Favorite</source>
-        <translation>收藏夾</translation>
+        <translation>我的最愛</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>LAN</source>
-        <translation>局域網</translation>
+        <translation>區域網路</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Public Internet</source>
-        <translation>公共服務器</translation>
+        <translation>公開網路</translation>
     </message>
     <message>
         <location line="+7"/>
