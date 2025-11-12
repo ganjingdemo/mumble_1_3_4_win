@@ -1628,7 +1628,7 @@ QString UserModel::createDisplayString(const ClientUser &user) {
 
 	// Create a tag that indicates the volume adjustments
 	QString volumeTag;
-	if (std::abs(localVolumeDecibel) > 0 /* && g.s.bShowVolumeAdjustments */ ) {
+	if (std::abs(localVolumeDecibel) > 0 && g.s.bShowVolumeAdjustments) {
 		volumeTag = QString::asprintf("|%+d|", localVolumeDecibel);
 	}
 
