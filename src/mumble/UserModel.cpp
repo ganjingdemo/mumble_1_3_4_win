@@ -393,10 +393,8 @@ QVariant UserModel::data(const QModelIndex &idx, int role) const {
 				break;
 			case Qt::DisplayRole:
 				if (idx.column() == 0) {
-					if (! p->qsFriendName.isEmpty() && (p->qsFriendName.toLower() != p->qsName.toLower()))
-						return QString::fromLatin1("%1 (%2)").arg(p->qsName).arg(p->qsFriendName);
-					else
-						return p->qsName;
+
+					return createDisplayString(*p);
 				}
 				if (! p->qbaCommentHash.isEmpty())
 					l << (item->bCommentSeen ? qiCommentSeen : qiComment);
@@ -1610,4 +1608,40 @@ bool UserModel::dropMimeData(const QMimeData *md, Qt::DropAction, int row, int c
 void UserModel::updateOverlay() const {
 	g.o->updateOverlay();
 	g.lcd->updateUserView();
+}
+
+
+QString UserModel::createDisplayString(const ClientUser &user) {
+	// Get the configured volume adjustment.
+	float volumeAdjustment = 1.0f;
+	volumeAdjustment = user.getLocalVolumeAdjustments();
+	// Transform the adjustment into dB
+	// *2 == 6 dB
+	int localVolumeDecibel = std::round(log2f(volumeAdjustment) * 6);
+
+	// Create a friend-tag
+	QString friendTag;
+	if (!user.qsFriendName.isEmpty() && user.qsName.compare(user.qsFriendName, Qt::CaseInsensitive) != 0) {
+		friendTag = QString::fromLatin1("(%2)").arg(user.qsFriendName);
+	}
+
+
+	// Create a tag that indicates the volume adjustments
+	QString volumeTag;
+	if (std::abs(localVolumeDecibel) > 0 /* && g.s.bShowVolumeAdjustments */ ) {
+		volumeTag = QString::asprintf("|%+d|", localVolumeDecibel);
+	}
+
+	QString displayString;
+	displayString += user.qsName;
+
+	if (!friendTag.isEmpty()) {
+		displayString += QLatin1String(" ") + friendTag;
+	}
+
+	if (!volumeTag.isEmpty()) {
+		displayString += QLatin1String("   ") + volumeTag;
+	}
+
+	return displayString;
 }

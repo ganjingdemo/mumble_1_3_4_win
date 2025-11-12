@@ -160,6 +160,11 @@ class UserModel : public QAbstractItemModel {
 
 		unsigned int uiSessionComment;
 		int iChannelDescription;
+		/// Creates the display string for the given user
+		///
+		/// @param user The user to create the string for
+		/// @return The created display string
+		static QString createDisplayString(const ClientUser &user);
 	public slots:
 		/// Invalidates the model data of the ClientUser triggering this slot.
 		void userStateChanged();

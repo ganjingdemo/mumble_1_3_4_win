@@ -485,7 +485,7 @@ bool AudioOutput::mix(void *outbuff, unsigned int nsamp) {
 			AudioOutputSpeech *speech = qobject_cast<AudioOutputSpeech *>(aop);
 			if (speech) {
 				const ClientUser *user = speech->p;
-				volumeAdjustment *= user->fLocalVolume;
+				volumeAdjustment *= user->getLocalVolumeAdjustments();
 				if (prioritySpeakerActive) {
 					
 					if (user->tsState != Settings::Whispering

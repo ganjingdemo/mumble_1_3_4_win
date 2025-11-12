@@ -381,7 +381,7 @@ void MainWindow::msgUserState(const MumbleProto::UserState &msg) {
 			pDst->setLocalMute(true);
 		if (g.db->isLocalIgnored(pDst->qsHash))
 			pDst->setLocalIgnore(true);
-		pDst->fLocalVolume = g.db->getUserLocalVolume(pDst->qsHash);
+		pDst->setLocalVolumeAdjustment(g.db->getUserLocalVolume(pDst->qsHash));
 	}
 
 	if (msg.has_self_deaf() || msg.has_self_mute()) {
