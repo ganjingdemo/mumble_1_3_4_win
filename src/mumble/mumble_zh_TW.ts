@@ -5738,47 +5738,47 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <location/>
         <source>&amp;Mute Self</source>
-        <translation>自我關閉麥克風(&amp;M)</translation>
+        <translation>關閉自己的麥克風(&amp;M)</translation>
     </message>
     <message>
         <location/>
         <source>Mute yourself</source>
-        <translation>自我關閉麥克風</translation>
+        <translation>關閉自己的麥克風</translation>
     </message>
     <message>
         <location/>
         <source>Mute or unmute yourself. When muted, you will not send any data to the server. Unmuting while deafened will also undeafen.</source>
-        <translation>對自己關閉麥克風或取消關閉麥克風。當關閉麥克風時，你將無法發送語音到伺服器。當取消關閉麥克風時將同時取消關閉喇叭。</translation>
+        <translation>關閉或開啟您自己的麥克風。當麥克風被關閉時，您將不會向服務器發送任何數據。開啟麥克風也會同時開啟揚聲器。</translation>
     </message>
     <message>
         <location/>
         <source>&amp;Deafen Self</source>
-        <translation>自我關閉喇叭(&amp;D)</translation>
+        <translation>關閉自己的揚聲器(&amp;D)</translation>
     </message>
     <message>
         <location/>
         <source>Deafen yourself</source>
-        <translation>自我關閉喇叭</translation>
+        <translation>關閉自己的揚聲器</translation>
     </message>
     <message>
         <location/>
         <source>Deafen or undeafen yourself. When deafened, you will not hear anything. Deafening yourself will also mute.</source>
-        <translation>使自己關閉喇叭或取消關閉喇叭。當關閉喇叭時，你將聽不到聲音。自我關閉喇叭時亦關閉麥克風。</translation>
+        <translation>關閉或開啟您自己的揚聲器。當揚聲器被關閉時，您無法聽到任何談話。關閉揚聲器也會同時關閉麥克風。</translation>
     </message>
     <message>
         <location/>
         <source>&amp;Text-To-Speech</source>
-        <translation>文字轉語音(&amp;T)</translation>
+        <translation>語音播報(&amp;T)</translation>
     </message>
     <message>
         <location/>
         <source>Toggle Text-To-Speech</source>
-        <translation>切換文字轉語音</translation>
+        <translation>開關語音播報</translation>
     </message>
     <message>
         <location/>
         <source>Enable or disable the text-to-speech engine. Only messages enabled for TTS in the Configuration dialog will actually be spoken.</source>
-        <translation>使用或庭用文字轉語音引擎。只有在設定對話框裡啟用了文字轉語音時英文文字訊息才會被讀出來。</translation>
+        <translation>啟用或禁用文字轉語音引擎。只有在“配置”對話框中啟用語音播報的消息才會被實際朗讀。</translation>
     </message>
     <message>
         <location/>
