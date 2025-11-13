@@ -41,6 +41,7 @@ void NetworkConfig::load(const Settings &r) {
 	loadCheckBox(qcbQoS, s.bQoS);
 	loadCheckBox(qcbAutoReconnect, s.bReconnect);
 	loadCheckBox(qcbAutoConnect, s.bAutoConnect);
+	loadCheckBox(qcbDisablePublicList, s.disablePublicList);
 	loadCheckBox(qcbSuppressIdentity, s.bSuppressIdentity);
 	loadComboBox(qcbType, s.ptProxyType);
 
@@ -73,6 +74,7 @@ void NetworkConfig::save() const {
 	s.bQoS = qcbQoS->isChecked();
 	s.bReconnect = qcbAutoReconnect->isChecked();
 	s.bAutoConnect = qcbAutoConnect->isChecked();
+	s.disablePublicList = qcbDisablePublicList->isChecked();
 	s.bSuppressIdentity = qcbSuppressIdentity->isChecked();
 	s.bHideOS = qcbHideOS->isChecked();
 
