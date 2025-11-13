@@ -2065,7 +2065,7 @@ Mumble 尚在持續開發中，開發人員希望知道使用者的需求。Mumb
     <message>
         <location/>
         <source>This ignores the OS speaker configuration and configures the positioning for headphones instead.</source>
-        <translation>這將忽略操作系統的揚聲器配置并為耳機配置音頻定位.</translation>
+        <translation>這將忽略操作系統的揚聲器配置并為耳機配置音頻定位。</translation>
     </message>
     <message>
         <location/>
@@ -2090,7 +2090,7 @@ Mumble 尚在持續開發中，開發人員希望知道使用者的需求。Mumb
     <message>
         <location/>
         <source>Letting Mumble figure out when you&apos;re talking and when you&apos;re silent.</source>
-        <translation>讓 Mumble 分辨出你是在說話還是保持安靜.</translation>
+        <translation>讓 Mumble 分辨出你是在說話還是保持安靜。</translation>
     </message>
     <message>
         <location/>
@@ -2111,7 +2111,7 @@ Mumble 尚在持續開發中，開發人員希望知道使用者的需求。Mumb
         <location/>
         <source>Next you need to adjust the following slider. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you&apos;re not talking, everything should be in the red (definitively not speech).</source>
         <oldsource>Next you need to adjust the following two sliders. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you're not talking, everything should be in the red (definitively not speech).</oldsource>
-        <translation>下一步你需要調節下面兩個滑塊。你最初講几句話時進度條應該停留在綠區（確定是講話）。當你講話時，進度條應該停留在黃區（可能是講話）﹔當你沒講話時，進度條應該停留在紅區(明確沒在講話）.</translation>
+        <translation>下一步你需要調節下面兩個滑塊。你最初講几句話時進度條應該停留在綠區（確定是講話）。當你講話時，進度條應該停留在黃區（可能是講話）﹔當你沒講話時，進度條應該停留在紅區(明確沒在講話）。</translation>
     </message>
     <message>
         <location/>
@@ -2252,7 +2252,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
         <location/>
         <source>Next you need to adjust the following slider. The first few utterances you say should end up in the empty area (definitive speech). While talking, you should stay inside the striped (might be speech) and when you&apos;re not talking, everything should be in the crisscrossed (definitively not speech).</source>
         <comment>For high contrast mode</comment>
-        <translation>下一步你需要調節下面兩個滑塊。你最初講幾句話時進度條應該停留在綠區（確定是講話）。當你講話時，進度條應該停留在黃區（可能是講話）﹔當你沒講話時，進度條應該停留在紅區(明確沒在講話）.</translation>
+        <translation>下一步你需要調節下面兩個滑塊。你最初講幾句話時進度條應該停留在綠區（確定是講話）。當你講話時，進度條應該停留在黃區（可能是講話）﹔當你沒講話時，進度條應該停留在紅區(明確沒在講話）。</translation>
     </message>
     <message>
         <location/>
@@ -3795,7 +3795,7 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     <message>
         <location line="+72"/>
         <source>Shortcut button combination.</source>
-        <translation>快速鍵按鈕組合.</translation>
+        <translation>快速鍵按鈕組合。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5437,7 +5437,7 @@ This field describes the size of an LCD device. The size is given either in pixe
         <location line="+6"/>
         <location line="+59"/>
         <source>Server connection failed: %1.</source>
-        <translation>伺服器連線失敗: %1.</translation>
+        <translation>伺服器連線失敗: %1。</translation>
     </message>
     <message>
         <location line="-57"/>
@@ -6046,7 +6046,7 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <location line="+48"/>
         <source>%1 is now muted and deafened.</source>
-        <translation>%1 現在被關閉麥克風和關閉喇叭.</translation>
+        <translation>%1 關閉了麥克風和揚聲器。</translation>
     </message>
     <message>
         <location line="-304"/>
@@ -6147,12 +6147,12 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <location line="+91"/>
         <source>%1 is now muted.</source>
-        <translation>%1 現在被關閉麥克風。</translation>
+        <translation>%1 關閉了麥克風。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 is now unmuted.</source>
-        <translation>%1 現在被取消關閉麥克風。</translation>
+        <translation>%1 開啟了麥克風。</translation>
     </message>
     <message>
         <location line="+11"/>
