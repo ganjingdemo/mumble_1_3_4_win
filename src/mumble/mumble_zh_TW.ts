@@ -7280,6 +7280,14 @@ Prevents the client from sending potentially identifying information about the o
         <source>Do not send OS information to Mumble servers and web servers</source>
         <translation>請勿向 Mumble 服務器和網頁服務器發送操作系統信息</translation>
     </message>
+    <message>
+        <source>When toggled this hides the public server list from the connect dialog</source>
+        <translation>啟用時，在連接對話框隱藏公共伺服器列表</translation>
+    </message>
+    <message>
+        <source>Hide public server list</source>
+        <translation>隱藏公共伺服器列表</translation>
+    </message>
 </context>
 <context>
     <name>Overlay</name>
