@@ -4732,6 +4732,14 @@ This field describes the size of an LCD device. The size is given either in pixe
         <source>Lock layout</source>
         <translation>锁定布局</translation>
     </message>
+    <message>
+        <source>Show the local volume adjustment for each user (if any).</source>
+        <translation>显示每名用户的本地音量调整（如果有）。</translation>
+    </message>
+    <message>
+        <source>Show volume adjustments</source>
+        <translation>显示音量调整</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

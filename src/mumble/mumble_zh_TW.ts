@@ -3972,17 +3972,17 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Size</source>
-        <translation>解析度</translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location/>
         <source>Enabled</source>
-        <translation>已啟用</translation>
+        <translation>啟用</translation>
     </message>
     <message>
         <location/>
         <source>Views</source>
-        <translation>檢視</translation>
+        <translation>視圖</translation>
     </message>
     <message>
         <location/>
@@ -4014,7 +4014,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location filename="Log.cpp" line="+224"/>
         <source>Debug</source>
-        <translation>除錯</translation>
+        <translation>調試</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4044,7 +4044,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location line="+7"/>
         <source>Other self-muted/deafened</source>
-        <translation>其他人自我關閉喇叭/關閉麥克風</translation>
+        <translation>其他人關閉自己的麥克風/揚聲器</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4059,77 +4059,77 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location line="-13"/>
         <source>User Joined Server</source>
-        <translation>使用者加入伺服器</translation>
+        <translation>用戶加入伺服器</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User Left Server</source>
-        <translation>使用者離開伺服器</translation>
+        <translation>用戶離開伺服器</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User recording state changed</source>
-        <translation>使用者錄音狀態改變</translation>
+        <translation>用戶錄音狀態改變</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User kicked (you or by you)</source>
-        <translation>使用者被(你或因為你)踢出</translation>
+        <translation>用戶踢出你或被你踢出</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User kicked</source>
-        <translation>使用者被踢出</translation>
+        <translation>用戶被踢出</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You self-muted</source>
-        <translation>您設定關閉麥克風</translation>
+        <translation>您關閉自己的麥克風</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>User muted (you)</source>
-        <translation>使用者關閉(你的)麥克風</translation>
+        <translation>用戶關閉您的麥克風</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User muted (by you)</source>
-        <translation>使用者被關閉麥克風(由你)</translation>
+        <translation>用戶被您關閉麥克風</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User muted (other)</source>
-        <translation>使用者關閉麥克風(其他人)</translation>
+        <translation>用戶關閉麥克風（其他）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User Joined Channel</source>
-        <translation>使用者加入頻道</translation>
+        <translation>用戶加入頻道</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User Left Channel</source>
-        <translation>使用者離開頻道</translation>
+        <translation>用戶離開頻道</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>You self-unmuted</source>
-        <translation>您設定開啟麥克風</translation>
+        <translation>您開啟自己的麥克風</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You self-deafened</source>
-        <translation>您設定關閉喇叭</translation>
+        <translation>您關閉自己的揚聲器</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You self-undeafened</source>
-        <translation>您設定開啟喇叭</translation>
+        <translation>您開啟自己的揚聲器</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>User renamed</source>
-        <translation>使用者已更名</translation>
+        <translation>用戶重命名</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4169,7 +4169,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location line="+13"/>
         <source>[[ Text object too large to display ]]</source>
-        <translation>[[ 顯示的文字物件太大 ]]</translation>
+        <translation>[[ 文字對象太大，無法顯示 ]]</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -4190,7 +4190,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location line="+2"/>
         <source>player link</source>
-        <translation>玩家連結</translation>
+        <translation>播放器鏈接</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4361,17 +4361,17 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>If enabled text messages you send will be read back to you with TTS</source>
-        <translation>啟此功能啟用後將使用文本轉語音讀出回傳的訊息。</translation>
+        <translation>如果啟用，您發送的文字消息也會被語音播報給您</translation>
     </message>
     <message>
         <location/>
         <source>Read back own messages</source>
-        <translation>回送訊息</translation>
+        <translation>播報自己的消息</translation>
     </message>
     <message>
         <location/>
         <source>Chat Log</source>
-        <translation>聊天紀錄</translation>
+        <translation>聊天記錄</translation>
     </message>
     <message>
         <location/>
@@ -4410,12 +4410,12 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location line="-50"/>
         <source>Only with users</source>
-        <translation>只顯示自己所在</translation>
+        <translation>僅有用戶時</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All</source>
-        <translation>全部</translation>
+        <translation>全部展開</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4449,7 +4449,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location filename="LookConfig.ui"/>
         <source>This sets which channels to automatically expand. &lt;i&gt;None&lt;/i&gt; and &lt;i&gt;All&lt;/i&gt; will expand no or all channels, while &lt;i&gt;Only with users&lt;/i&gt; will expand and collapse channels as users join and leave them.</source>
-        <translation>This sets which channels to automatically expand. &lt;i&gt;None&lt;/i&gt; and &lt;i&gt;All&lt;/i&gt; will expand no or all channels, while &lt;i&gt;Only with users&lt;/i&gt; will expand and collapse channels as users join and leave them.</translation>
+        <translation>設置頻道的自動展開。&lt;i&gt;不展開&lt;/i&gt;和&lt;i&gt;全部展開&lt;/i&gt;將會摺疊所有頻道或展開所有頻道。&lt;i&gt;僅有用戶時&lt;/i&gt;將會在用戶加入或離開頻道時自動展開或摺疊。</translation>
     </message>
     <message>
         <location/>
@@ -4540,7 +4540,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Expand</source>
-        <translation>展開</translation>
+        <translation>頻道展開</translation>
     </message>
     <message>
         <location/>
@@ -4555,22 +4555,22 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Ask whether to close or minimize when quitting Mumble.</source>
-        <translation>詢問退出 Mumble 時是關閉還是最小化。</translation>
+        <translation>在退出 Mumble 時，詢問您要關閉還是最小化。</translation>
     </message>
     <message>
         <location/>
         <source>Ask on quit while connected</source>
-        <translation>與伺服器連線期間離開前確認</translation>
+        <translation>在已連接服務器時確認退出</translation>
     </message>
     <message>
         <location/>
         <source>Always On Top</source>
-        <translation>最上層顯示</translation>
+        <translation>始終置頂</translation>
     </message>
     <message>
         <location/>
         <source>&lt;b&gt;If set, minimizing the Mumble main window will cause it to be hidden and accessible only from the tray. Otherwise, it will be minimized as a window normally would.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;如果選中，最小化 Mumble 主窗口時將使得它被隱藏到系統托盤。否則將以普通窗口方式最小化。&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;如果設置，最小化時 Mumble 主窗口將被最小化到系統托盤。否則將以普通窗口方式最小化。&lt;/b&gt;</translation>
     </message>
     <message>
         <location/>
@@ -4600,42 +4600,42 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>In minimal view</source>
-        <translation>簡潔視窗時</translation>
+        <translation>簡潔視圖時</translation>
     </message>
     <message>
         <location/>
         <source>In normal view</source>
-        <translation>一般顯示時</translation>
+        <translation>普通視圖時</translation>
     </message>
     <message>
         <location/>
         <source>Displays talking status in system tray</source>
-        <translation>在系統列顯示發話狀態</translation>
+        <translation>在系統托盤顯示說話狀態</translation>
     </message>
     <message>
         <location/>
         <source>Show talking status in tray icon</source>
-        <translation>在系統列顯示發話狀態</translation>
+        <translation>使用系統托盤圖標顯示說話狀態</translation>
     </message>
     <message>
         <location/>
         <source>This setting controls in which situations the application will stay always on top. If you select &lt;i&gt;Never&lt;/i&gt; the application will not stay on top. &lt;i&gt;Always&lt;/i&gt; will always keep the application on top. &lt;i&gt;In minimal view&lt;/i&gt; / &lt;i&gt;In normal view&lt;/i&gt; will only keep the application always on top when minimal view is activated / deactivated.</source>
-        <translation>This setting controls in which situations the application will stay always on top. If you select &lt;i&gt;Never&lt;/i&gt; the application will not stay on top. &lt;i&gt;Always&lt;/i&gt; will always keep the application on top. &lt;i&gt;In minimal view&lt;/i&gt; / &lt;i&gt;In normal view&lt;/i&gt; will only keep the application always on top when minimal view is activated / deactivated.</translation>
+        <translation>此選項控制何時將應用置於頂層。如果選擇&lt;i&gt;從不&lt;/i&gt;，應用程序將永遠不會至於頂層。&lt;i&gt;總是&lt;/i&gt;表示應用程序總是顯示在頂層。&lt;i&gt;簡潔視圖時&lt;/i&gt;/&lt;i&gt;普通視圖時&lt;/i&gt;表示將僅在激活/未激活簡潔視圖時將應用程序置於頂層。</translation>
     </message>
     <message>
         <location/>
         <source>Show context menu in menu bar</source>
-        <translation>在選單列顯示使用者與頻道選單</translation>
+        <translation>菜單欄顯示右鍵菜單</translation>
     </message>
     <message>
         <location/>
         <source>Apply some high contrast optimizations for visually impaired users</source>
-        <translation>允許視障使用者使用高對比色彩配置</translation>
+        <translation>為視障用戶啟用一些高對比度優化</translation>
     </message>
     <message>
         <location/>
         <source>Optimize for high contrast</source>
-        <translation>高對比色彩配置最佳化</translation>
+        <translation>高對比度優化</translation>
     </message>
     <message>
         <location/>
@@ -4645,12 +4645,12 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Adds user and channel context menus into the menu bar</source>
-        <translation>在選單列顯示使用者與頻道選單</translation>
+        <translation>在菜單欄添加“用戶”和“頻道”的右鍵菜單</translation>
     </message>
     <message>
         <location/>
         <source>Tray Icon</source>
-        <translation>系統列圖示</translation>
+        <translation>系統托盤圖標</translation>
     </message>
     <message>
         <location/>
@@ -4660,12 +4660,12 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Use selected item as the chat bar target</source>
-        <translation>手動指定發送文字訊息的目標頻道</translation>
+        <translation>以所選對象作為聊天欄目標</translation>
     </message>
     <message>
         <location/>
         <source>Filter automatically hides empty channels</source>
-        <translation>過濾器會自動隱藏空頻道</translation>
+        <translation>篩選頻道時自動隱藏空頻道</translation>
     </message>
     <message>
         <location/>
@@ -4680,7 +4680,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <location/>
         <source>Theme to use to style the user interface</source>
-        <translation>佈景主題用來設定使用者介面風格</translation>
+        <translation>用於設置界面樣式的主題</translation>
     </message>
     <message>
         <location/>
@@ -4721,6 +4721,14 @@ This field describes the size of an LCD device. The size is given either in pixe
         <location/>
         <source>Lock layout</source>
         <translation>鎖定布局</translation>
+    </message>
+    <message>
+        <source>Show the local volume adjustment for each user (if any).</source>
+        <translation>顯示每名用戶的本地音量調整（如果有）。</translation>
+    </message>
+    <message>
+        <source>Show volume adjustments</source>
+        <translation>顯示音量調整</translation>
     </message>
 </context>
 <context>
