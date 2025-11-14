@@ -3216,6 +3216,11 @@ Are you sure you wish to replace your certificate?
         <translation>連線(&amp;C)</translation>
     </message>
     <message>
+        <location/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
         <location line="+76"/>
         <source>&amp;Filters</source>
         <translation>篩選(&amp;F)</translation>
