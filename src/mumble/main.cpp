@@ -89,8 +89,9 @@ int main(int argc, char **argv) {
 #endif
 
 
-
-#ifdef ENABLE_DEBUG_CONSOLE
+//#ifdef ENABLE_DEBUG_CONSOLE
+//#if 1
+#if 0
 
 //> mumble_debug
 	AllocConsole();
