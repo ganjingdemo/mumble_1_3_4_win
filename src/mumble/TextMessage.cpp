@@ -14,6 +14,9 @@ TextMessage::TextMessage(QWidget *p, QString title, bool bChannel) : QDialog(p) 
 	setWindowTitle(title);
 	bTreeMessage = false;
 
+	qbbButtons->button(QDialogButtonBox::Ok)->setText(tr("OK"));
+	qbbButtons->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
+
 	QObject::connect(rteMessage, SIGNAL(accept()), this, SLOT(accept()));
 }
 

@@ -8477,6 +8477,19 @@ To upgrade these files to their latest versions, click the button below.</source
         <source>Send recursively to subchannels</source>
         <translation>发送至所有子频道</translation>
     </message>
+
+    <message>
+        <location/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+
 </context>
 <context>
     <name>Tokens</name>
