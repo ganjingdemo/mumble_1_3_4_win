@@ -8158,6 +8158,48 @@ To upgrade these files to their latest versions, click the button below.</source
         <source>Insert Image</source>
         <translation>插入图片</translation>
     </message>
+
+    <message>
+        <location/>
+        <source>&amp;Undo	Ctrl+Z</source>
+        <translation>撤消(&amp;U)	Ctrl+Z</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>&amp;Redo	Ctrl+Y</source>
+        <translation>重做(&amp;R)	Ctrl+Y</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Cu&amp;t	Ctrl+X</source>
+        <translation>剪切(&amp;T)	Ctrl+X</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>&amp;Copy	Ctrl+C</source>
+        <translation>复制(&amp;C)	Ctrl+C</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>&amp;Paste	Ctrl+V</source>
+        <translation>粘贴(&amp;P)	Ctrl+V</translation>
+    </message>
+    
+    <message>
+        <location/>
+        <source>Delete</source>
+        <translation>删除</translation>
+    </message>
+
+    <message>
+        <source>Select All	Ctrl+A</source>
+        <translation>全选	Ctrl+A</translation>
+    </message>
+
 </context>
 <context>
     <name>RichTextEditorLink</name>

@@ -6946,7 +6946,7 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>Select All	Ctrl+A</source>
-        <translation>全部選擇	Ctrl+A</translation>
+        <translation>全選	Ctrl+A</translation>
     </message>
 </context>
 <context>
@@ -8146,6 +8146,47 @@ To upgrade these files to their latest versions, click the button below.</source
         <location/>
         <source>Insert Image</source>
         <translation>插入圖片</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>&amp;Undo	Ctrl+Z</source>
+        <translation>撤消(&amp;U)	Ctrl+Z</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>&amp;Redo	Ctrl+Y</source>
+        <translation>重做(&amp;R)	Ctrl+Y</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Cu&amp;t	Ctrl+X</source>
+        <translation>剪切(&amp;T)	Ctrl+X</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>&amp;Copy	Ctrl+C</source>
+        <translation>複製(&amp;C)	Ctrl+C</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>&amp;Paste	Ctrl+V</source>
+        <translation>貼上(&amp;P)	Ctrl+V</translation>
+    </message>
+    
+    <message>
+        <location/>
+        <source>Delete</source>
+        <translation>刪除</translation>
+    </message>
+
+    <message>
+        <source>Select All	Ctrl+A</source>
+        <translation>全選	Ctrl+A</translation>
     </message>
 </context>
 <context>

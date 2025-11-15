@@ -71,9 +71,14 @@ class RichTextEditor : public QTabWidget, Ui::RichTextEditor {
 		void on_qaImage_triggered();
 
 		void on_qptePlainText_textChanged();
+		void on_qptePlainText_customContextMenuRequested(const QPoint &mpos);
+
 		void on_qteRichText_textChanged();
 		void on_qteRichText_cursorPositionChanged();
 		void on_qteRichText_currentCharFormatChanged();
+
+		void on_qteRichText_customContextMenuRequested(const QPoint &mpos);
+
 		void onCurrentChanged(int);
 };
 

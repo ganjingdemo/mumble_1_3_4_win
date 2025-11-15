@@ -29,6 +29,11 @@
     </item>
     <item>
      <widget class="RichTextHtmlEdit" name="qteRichText">
+
+      <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+      </property>
+
       <property name="autoFormatting">
        <set>QTextEdit::AutoAll</set>
       </property>
@@ -42,7 +47,11 @@
    </attribute>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPlainTextEdit" name="qptePlainText"/>
+     <widget class="QPlainTextEdit" name="qptePlainText">
+         <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+         </property>
+     </widget>
     </item>
    </layout>
   </widget>

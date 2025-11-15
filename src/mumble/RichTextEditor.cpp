@@ -336,6 +336,51 @@ void RichTextEditor::on_qteRichText_currentCharFormatChanged() {
 	updateActions();
 }
 
+
+void RichTextEditor::on_qteRichText_customContextMenuRequested(const QPoint &mpos) 
+{
+	//printf("\nEnter RichTextEditor::on_qteRichText_customContextMenuRequested");
+
+	QMenu *menu =qteRichText->createStandardContextMenu(mpos);
+
+	QList<QAction*> actions = menu->actions();
+
+	for (QAction* action : actions) 
+	{
+		QString ationText = action->text();
+		const char * sz_actionText = qUtf8Printable(ationText);
+		QString str_tr_actionText = tr(sz_actionText);
+		action->setText(str_tr_actionText);
+
+		// const char *sz_tr_actionText = qUtf8Printable(str_tr_actionText);
+		// printf("\nIn on_qteRichText_customContextMenuRequested, sz_actionText=%s, sz_tr_actionText=%s", sz_actionText, sz_tr_actionText);
+	}
+	menu->exec(qteRichText->mapToGlobal(mpos));
+	delete menu;
+}
+
+void RichTextEditor::on_qptePlainText_customContextMenuRequested(const QPoint &mpos)
+{
+	// printf("\nEnter RichTextEditor::on_qptePlainText_customContextMenuRequested");
+
+	QMenu *menu =qteRichText->createStandardContextMenu(mpos);
+
+	QList<QAction*> actions = menu->actions();
+
+	for (QAction* action : actions) 
+	{
+		QString ationText = action->text();
+		const char * sz_actionText = qUtf8Printable(ationText);
+		QString str_tr_actionText = tr(sz_actionText);
+		action->setText(str_tr_actionText);
+		
+		// const char *sz_tr_actionText = qUtf8Printable(str_tr_actionText);
+		// printf("\nIn on_qptePlainText_customContextMenuRequested, sz_actionText=%s, sz_tr_actionText=%s", sz_actionText, sz_tr_actionText);
+	}
+	menu->exec(qteRichText->mapToGlobal(mpos));
+	delete menu;
+}
+
 void RichTextEditor::updateColor(const QColor &col) {
 	if (col == qcColor)
 		return;
