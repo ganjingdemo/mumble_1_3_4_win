@@ -1,4 +1,4 @@
-How to build Mumble 1.3.4 windows static binary
+How to build Mumble 1.3.4 windows static binary (64 bit)
 
 Tested under windows 10 Home
 
@@ -9,16 +9,16 @@ Some parts can refer to https://github.com/mumble-voip/mumble-releng/blob/master
 1. Start a cygwin console.
 
 (1) Method 1
-cd /d C:\MumbleBuild\win32-static-1.3.x-2020-10-05-e590ac8-925
+cd /d C:\MumbleBuild\win64-static-1.3.x-2021-02-10-da6c376-926
 prep.cmd
 cygwin.cmd
 
 (2) Method 2
-Run "C:\MumbleBuild\win32-static-1.3.x-2020-10-05-e590ac8-925\MumbleBuild - cygwin.lnk"
+Run "C:\MumbleBuild\win64-static-1.3.x-2021-02-10-da6c376-926\MumbleBuild - cygwin.lnk"
 
 The content of the lnk: "%WINDIR%\system32\cmd.exe /k prep.cmd && cygwin.cmd"
 
-start in "C:\MumbleBuild\win32-static-1.3.x-2020-10-05-e590ac8-925"
+start in "C:\MumbleBuild\win64-static-1.3.x-2021-02-10-da6c376-926"
 
 
 2. Get source code
@@ -45,22 +45,14 @@ python update_version.py
 
 (2) Then call the following batch files:
 
+. set_64_bit_rc_path.bash
+# To add "/cygdrive/c/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x64" to path
+
 ./01_01_generate_makefile.bat
 ./02_update_makefile.bat
 ./03_compile_mumble.bat
 
 After build, the binary is under the release folder.
-
-See the following file list:
-
-$ pwd
-/cygdrive/c/dev/mumble/release
-
-$ ls *.exe
-mumble.exe  mumble_ol_helper.exe  mumble_ol_helper_x64.exe
-
-$ ls *.dll
-celt0.0.11.0.dll  celt0.0.7.0.dll  mumble_app.dll  mumble_ol.dll  mumble_ol_x64.dll  opus.dll  rnnoise.dll  speex.dll
 
 (3) Make installer
 
@@ -68,13 +60,13 @@ Need to install wix 3.x (https://github.com/wixtoolset/wix3/releases/download/wi
 
 [1] Start a VS2015 command line console from
 
-"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2015\Visual Studio Tools\Windows Desktop Command Prompts\VS2015 x86 Native Tools Command Prompt.lnk"
+"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2015\Visual Studio Tools\Windows Desktop Command Prompts\VS2015 x64 Native Tools Command Prompt.lnk"
 
 or run
 
 cd /d "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\"
-vcvarsall.bat x86
+vcvarsall.bat amd64
 
 [2] cd /d c:\dev\mumble
 
-[3] 05_build_installer.bat
+[3] 06_build_installer_64bit.bat
