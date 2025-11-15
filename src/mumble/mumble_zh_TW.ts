@@ -6723,8 +6723,8 @@ Valid actions are:
     </message>
     <message>
         <location/>
-        <source>Toggle the channel filter (Ctrl+F)</source>
-        <translation>切換頻道過濾器 (Ctrl+F)</translation>
+        <source>Toggle the channel filter (Alt+F)</source>
+        <translation>開關頻道過濾器 (Alt+F)</translation>
     </message>
     <message>
         <location/>
@@ -6738,14 +6738,33 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <location/>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
+        <source>Alt+F</source>
+        <translation>Alt+F</translation>
     </message>
     <message>
         <location/>
         <source>&amp;Hide Channel when Filtering</source>
-        <translation>隱藏被過濾的頻道 (&amp;H)</translation>
+        <translation>篩選時隱藏頻道(&amp;H)</translation>
     </message>
+
+    <message>
+        <source>Search</source>
+        <translation>搜尋</translation>
+    </message>
+    <message>
+        <source>Search for a user or channel (Ctrl+F)</source>
+        <translation>搜尋用戶或頻道 (Ctrl+F)</translation>
+    </message>
+    <message>
+        <source>Toggle search dialog</source>
+        <comment>Global Shortcut</comment>
+        <translation>開關搜尋對話框</translation>
+    </message>
+    <message>
+        <source>This will open or close the search dialog depending on whether it is currently opened already</source>
+        <translation>根據目前的開啟狀態開啟或關閉搜尋對話框</translation>
+    </message>
+
     <message>
         <location/>
         <source>Reset the avatar of the selected user.</source>
