@@ -6936,6 +6936,18 @@ the channel&apos;s context menu.</source>
         <source>Shows the main Mumble window.</source>
         <translation>顯示 Mumble 主窗口。</translation>
     </message>
+    <message>
+        <source>&amp;Copy	Ctrl+C</source>
+        <translation>複製(&amp;C)	Ctrl+C</translation>
+    </message>
+    <message>
+        <source>Copy &amp;Link Location</source>
+        <translation>複製連結(&amp;L)</translation>
+    </message>
+    <message>
+        <source>Select All	Ctrl+A</source>
+        <translation>全部選擇	Ctrl+A</translation>
+    </message>
 </context>
 <context>
     <name>Manual</name>

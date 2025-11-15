@@ -760,6 +760,17 @@ void MainWindow::on_qteLog_customContextMenuRequested(const QPoint &mpos) {
 		qtcSaveImageCursor = cursor;
 	}
 
+	QList<QAction*> actions = menu->actions();
+
+	for (QAction* action : actions) 
+	{
+
+		QString ationText = action->text();
+		const char * sz_actionText = qUtf8Printable(ationText);
+		QString str_tr_actionText = tr(sz_actionText);
+		action->setText(str_tr_actionText);
+	}
+
 	menu->addSeparator();
 	menu->addAction(tr("Clear"), qteLog, SLOT(clear(void)));
 	menu->exec(qteLog->mapToGlobal(mpos));
