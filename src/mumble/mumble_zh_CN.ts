@@ -3138,6 +3138,37 @@ Are you sure you wish to replace your certificate?
         <source>Mumble Configuration</source>
         <translation>Mumble 配置</translation>
     </message>
+
+    <message>
+        <location/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Apply</source>
+        <translation>应用</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Reset</source>
+        <translation>重置</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Restore Defaults</source>
+        <translation>恢复默认值</translation>
+    </message>	
+
 </context>
 <context>
     <name>ConnectDialog</name>

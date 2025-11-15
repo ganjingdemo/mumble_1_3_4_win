@@ -13,6 +13,9 @@
 #include "Overlay.h"
 
 ConfigDialog::ConfigDialog(QWidget *p) : QDialog(p) {
+
+	//printf("\nEnter ConfigDialog::ConfigDialog");
+
 	setupUi(this);
 
 	s = g.s;
@@ -29,25 +32,31 @@ ConfigDialog::ConfigDialog(QWidget *p) : QDialog(p) {
 	okButton->setToolTip(tr("Accept changes"));
 	okButton->setWhatsThis(tr("This button will accept current settings and return to the application.<br />"
 	                          "The settings will be stored to disk when you leave the application."));
+	okButton->setText(tr("OK"));
+	//printf("\nOK translated: %s", qUtf8Printable(tr("OK")));
 
 	QPushButton *cancelButton = dialogButtonBox->button(QDialogButtonBox::Cancel);
 	cancelButton->setToolTip(tr("Reject changes"));
 	cancelButton->setWhatsThis(tr("This button will reject all changes and return to the application.<br />"
 	                              "The settings will be reset to the previous positions."));
+	cancelButton->setText(tr("Cancel"));
 
 	QPushButton *applyButton = dialogButtonBox->button(QDialogButtonBox::Apply);
 	applyButton->setToolTip(tr("Apply changes"));
 	applyButton->setWhatsThis(tr("This button will immediately apply all changes."));
+	applyButton->setText(tr("Apply"));
 
 	QPushButton *resetButton = pageButtonBox->button(QDialogButtonBox::Reset);
 	resetButton->setToolTip(tr("Undo changes for current page"));
 	resetButton->setWhatsThis(tr("This button will revert any changes done on the current page to the most recent applied settings."));
+	resetButton->setText(tr("Reset"));
 
 	QPushButton *restoreButton = pageButtonBox->button(QDialogButtonBox::RestoreDefaults);
 	restoreButton->setToolTip(tr("Restore defaults for current page"));
 	restoreButton->setWhatsThis(tr("This button will restore the defaults for the settings on the current page. Other pages will not be changed.<br />"
 	                               "To restore all settings to their defaults, you will have to use this button on every page."
 	                              ));
+	restoreButton->setText(tr("Restore Defaults"));
 
 	if (! g.s.qbaConfigGeometry.isEmpty()) {
 		if (! g.ocIntercept)

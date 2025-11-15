@@ -3106,7 +3106,7 @@ Are you sure you wish to replace your certificate?
     <message>
         <location line="+3"/>
         <source>Undo changes for current page</source>
-        <translation>取消變更。</translation>
+        <translation>撤銷此頁面的修改</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3116,7 +3116,7 @@ Are you sure you wish to replace your certificate?
     <message>
         <location line="+3"/>
         <source>Restore defaults for current page</source>
-        <translation>恢復預設值</translation>
+        <translation>恢復此頁面為預設值</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3129,6 +3129,37 @@ Are you sure you wish to replace your certificate?
         <source>Mumble Configuration</source>
         <translation>Mumble 設定</translation>
     </message>
+
+    <message>
+        <location/>
+        <source>OK</source>
+        <translation>確定</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Apply</source>
+        <translation>應用</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Reset</source>
+        <translation>重置</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Restore Defaults</source>
+        <translation>恢復預設值</translation>
+    </message>
+
 </context>
 <context>
     <name>ConnectDialog</name>
