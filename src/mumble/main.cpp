@@ -88,6 +88,31 @@ int main(int argc, char **argv) {
 	}
 #endif
 
+
+
+#ifdef ENABLE_DEBUG_CONSOLE
+
+//> mumble_debug
+	AllocConsole();
+
+	//
+	// https://stackoverflow.com/questions/15543571/allocconsole-not-displaying-cout
+	//
+
+	FILE *fDummy;
+
+	//
+	// std::cout, std::clog, std::cerr, std::cin
+	//
+	_wfreopen_s(&fDummy, L"CONIN$", L"r", stdin);
+	_wfreopen_s(&fDummy, L"CONOUT$", L"w", stderr);
+	_wfreopen_s(&fDummy, L"CONOUT$", L"w", stdout);
+
+	wprintf(L"\nMumble Debug Console.\n");
+//<
+
+#endif
+
 	QT_REQUIRE_VERSION(argc, argv, "4.4.0");
 
 #if defined(Q_OS_WIN)
@@ -380,6 +405,8 @@ int main(int argc, char **argv) {
 
 	const QString locale = g.s.qsLanguage.isEmpty() ? qsSystemLocale : g.s.qsLanguage;
 	qWarning("Locale is \"%s\" (System: \"%s\")", qPrintable(locale), qPrintable(qsSystemLocale));
+
+	//printf("\nLocale is \"%s\" (System: \"%s\")", qPrintable(locale), qPrintable(qsSystemLocale));
 
 	QTranslator translator;
 	if (translator.load(QLatin1String(":mumble_") + locale))
