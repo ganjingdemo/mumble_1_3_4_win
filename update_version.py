@@ -18,9 +18,9 @@ src/mumble/mumble_dll.rc
 src/murmur/murmur.plist
 src/murmur/murmur.rc'''
 
-ORIGINAL_CONTENT_LIST=["1.3.6", "1,3,6,46", "1.3.6.46"]
+ORIGINAL_CONTENT_LIST=["1.3.6", "1,3,6,60", "1.3.6.60"]
 
-UPDATE_CONTENT_LIST=["1.3.6", "1,3,6,60", "1.3.6.60"]
+UPDATE_CONTENT_LIST=["1.3.6", "1,3,6,62", "1.3.6.62"]
 
 def update_file(file_name):
 	f = open(file_name,"r")
