@@ -94,7 +94,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string notr="true">&amp;Ignore</string>
+            <string>&amp;Ignore</string>
            </property>
           </widget>
          </item>

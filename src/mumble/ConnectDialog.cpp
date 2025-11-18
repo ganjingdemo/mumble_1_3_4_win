@@ -808,6 +808,9 @@ void ConnectDialogEdit::init() {
 	qlePort->setText(QString::number(DEFAULT_MUMBLE_PORT));
 	qlePassword->setEchoMode(QLineEdit::Password);
 
+	qdbbButtonBox->button(QDialogButtonBox::Ok)->setText(tr("OK"));
+	qdbbButtonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
+
 	connect(qleName, SIGNAL(textChanged(const QString &)), this, SLOT(validate()));
 	connect(qleServer, SIGNAL(textChanged(const QString &)), this, SLOT(validate()));
 	connect(qlePort, SIGNAL(textChanged(const QString &)), this, SLOT(validate()));

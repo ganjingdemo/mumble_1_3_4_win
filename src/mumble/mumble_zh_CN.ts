@@ -3532,6 +3532,24 @@ Label of the server. This is what the server will be named like in your server l
         <source>&amp;Fill</source>
         <translation>填写(&amp;F)</translation>
     </message>
+
+    <message>
+        <source>&amp;Ignore</source>
+        <translation>忽略(&amp;I)</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+
+    <message>
+        <location/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+
 </context>
 <context>
     <name>CoreAudioSystem</name>
