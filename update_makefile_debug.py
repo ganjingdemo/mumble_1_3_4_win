@@ -15,7 +15,7 @@ CONTENT_MAP["\\cygdrive\\c\\MumbleBuild\\"] = "c:\\MumbleBuild\\"
 CONTENT_MAP["/cygdrive/c/MumbleBuild/"] = "c:\\MumbleBuild\\"
 
 #if need to debug, can uncomment the following line
-#CONTENT_MAP[" -Ox "] = " -Od -Zi "
+CONTENT_MAP[" -Ox "] = " -Od -Zi "
 
 
 def update_file(file_name):
