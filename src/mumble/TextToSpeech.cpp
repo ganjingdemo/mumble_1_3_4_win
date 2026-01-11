@@ -11,7 +11,7 @@
 
 class TextToSpeechPrivate {
 	public:
-		QTextToSpeech *m_tts;
+		//QTextToSpeech *m_tts;
 		QVector<QVoice> m_voices;
 		TextToSpeechPrivate();
 		~TextToSpeechPrivate();
@@ -20,19 +20,19 @@ class TextToSpeechPrivate {
 };
 
 TextToSpeechPrivate::TextToSpeechPrivate() {
-	m_tts = new QTextToSpeech();
+	//m_tts = new QTextToSpeech();
 }
 
 TextToSpeechPrivate::~TextToSpeechPrivate() {
-	delete m_tts;
+	//delete m_tts;
 }
 
 void TextToSpeechPrivate::say(const QString &text) {
-	m_tts->say(text);
+	//m_tts->say(text);
 }
 
 void TextToSpeechPrivate::setVolume(int volume) {
-	m_tts->setVolume(volume);
+	//m_tts->setVolume(volume);
 }
 
 TextToSpeech::TextToSpeech(QObject *p) : QObject(p) {
@@ -45,8 +45,8 @@ TextToSpeech::~TextToSpeech() {
 }
 
 void TextToSpeech::say(const QString &text) {
-	if (enabled)
-		d->say(text);
+	//if (enabled)
+		//d->say(text);
 }
 
 void TextToSpeech::setEnabled(bool e) {
@@ -58,5 +58,5 @@ void TextToSpeech::setVolume(int volume) {
 }
 
 bool TextToSpeech::isEnabled() const {
-	return enabled;
+	return false;
 }
